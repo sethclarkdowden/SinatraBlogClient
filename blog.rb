@@ -53,11 +53,12 @@ get '/post/:id' do
 	end
 end
 
-post '/post/:id/comment/create' do 	
-	@post = Post.get(params[:id])
-	@comment = Comment.new(params[:post])
+post '/post/:id/comment/create' do
+	@post = Post.get(params[:id]) 	
+	@comment = @post.comments.new(params[:comment])
 	@comment.save
-	redirect('/post/#{:id}')
+	a = :id
+	redirect('/post/#{a}')
 end
 
 get '/new' do 
