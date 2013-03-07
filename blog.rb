@@ -21,7 +21,7 @@ end
 
 class Comment
 	include DataMapper::Resource
-	
+
 	property :id,			Serial
 	property :post_id,		Serial
 	property :name,			String
@@ -46,8 +46,7 @@ end
 
 get '/post/:id' do
 	@post = Post.get(params[:id])
-	@comments = 1
-	@comments = Comment.get(params[:post_id])
+	@comments = @post.comments
 	if @post
 		erb :post
 	else
