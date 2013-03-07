@@ -1,8 +1,9 @@
-<h1>Blog</hi>
 <% @posts.each do |post| %>
-	<p> <%= @post.title %> </p>
-	<p> <%= @post.auther %> </p>
-	<p> <%= @post.content %> </p>
-	<br/>
-	<br/>
+	<div class="prevew">
+		<h1> <%= post.title %> : <%= post.id %> </h1>
+		<p> Auther: <%= post.auther %> </p>
+		<p> <%= post.content %> </p>
+		<a href="/delete/<%= post.id %>">delete</a>
+		<a href="/edit/<%= post.id %>">edit</a>
+	</div>
 <% end %>

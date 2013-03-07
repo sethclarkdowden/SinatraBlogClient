@@ -1,0 +1,15 @@
+<h3>Edit</h3>
+
+<form action="/update/<%= @post.id %>" method="post" id="post" enctype="multipart/form-data">
+
+	<p> 
+		Title: <br />
+	  <input type="text" name="post[title]" value="<%= @post.title %>" id="title"/>
+	</p>
+	<p>
+		Auther: <br /> 
+		<input type="text" name="post[auther]" id="auther" value="<%= @post.auther %>"/>
+	</p>
+	<textarea type="text" name="post[content]" id="content" rows="15" cols="30"><%= @post.content %></textarea><br />
+	<input type="submit" value="Save" />
+</form>
