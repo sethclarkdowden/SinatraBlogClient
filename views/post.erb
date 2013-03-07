@@ -1,5 +1,16 @@
-<div class="prevew">
+<div class="">
 	<h1> <%= @post.title %> : <%= @post.id %> </h1>
 	<p> Auther: <%= @post.auther %> </p>
 	<p> <%= @post.content %> </p>
 </div>
+
+<h3>New Comment:</h3>
+
+<h3>Comments:</h3>
+<% @comments.each do |comment| %>
+	<div class="comments">
+		<p><%= comment.name %></p>
+		<p><%= comment.body %></p>
+	</div><br/>
+<% end %>
+
