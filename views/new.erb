@@ -1,15 +1,15 @@
 <h3>New Post</h3>
 
-<form action = "/create" method = "post" id = "post">
+<form action="/create" method="post" id="post" enctype="multipart/form-data">
 
 	<p> 
 		Title: <br />
-	  <input type = "text" name = "post[title]" id = "title"/>
+	  <input type="text" name="post[title]" id="title"/>
 	</p>
 	<p>
 		Auther: <br /> 
-		<input type = "text" name = "post[auther]" id = "auther"/>
+		<input type="text" name="post[auther]" id="auther"/>
 	</p>
-	<textarea type = "text" name = "post[content]" id = "content" rows = "15" cols = "30">puts content here ...</textarea><br />
-	<input type = "submit" value = "Save" />
+	<textarea type="text" name="post[content]" id="content" rows="15" cols="30">puts content here ...</textarea><br />
+	<input type="submit" value="Save" />
 </form>
