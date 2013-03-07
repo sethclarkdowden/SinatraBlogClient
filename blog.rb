@@ -23,7 +23,6 @@ class Comment
 	include DataMapper::Resource
 
 	property :id,			Serial
-	property :post_id,		Serial
 	property :name,			String
 	property :body,			Text
 
@@ -52,6 +51,13 @@ get '/post/:id' do
 	else
 		redirect('/')
 	end
+end
+
+post '/post/:id/comment/create' do 	
+	@post = Post.get(params[:id])
+	@comment = Comment.new(params[:post])
+	@comment.save
+	redirect('/post/#{:id}')
 end
 
 get '/new' do 

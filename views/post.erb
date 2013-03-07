@@ -5,7 +5,7 @@
 </div>
 
 <h3>New Comment:</h3>
-<form action="" method="post" id="post">
+<form action="/post/<%= @post.id %>/comment/create" method="post" id="post">
 	<p>
 		Name: <br />
 		<input type="text" name="comment[name]" id="name"/>
@@ -14,7 +14,7 @@
 		Comment: <br />
 		<textarea type="text" name="comment[body]" id="content" rows="5" cols="40">put your comment here ...</textarea>
 	</p>
-
+	<input type="submit" value="Save" />
 </form>
 
 <h3>Comments:</h3>
