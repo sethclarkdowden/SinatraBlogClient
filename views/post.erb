@@ -5,10 +5,21 @@
 </div>
 
 <h3>New Comment:</h3>
+<form action="" method="post" id="post">
+	<p>
+		Name: <br />
+		<input type="text" name="comment[name]" id="name"/>
+	</p>
+	<p>
+		Comment: <br />
+		<textarea type="text" name="comment[body]" id="content" rows="5" cols="40">put your comment here ...</textarea>
+	</p>
+
+</form>
 
 <h3>Comments:</h3>
 <% @comments.each do |comment| %>
-	<div class="comments">
+	<div class="">
 		<p><%= comment.name %></p>
 		<p><%= comment.body %></p>
 	</div><br/>
