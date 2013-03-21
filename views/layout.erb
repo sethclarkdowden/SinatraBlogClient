@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="theme.css">
+		<link media="screen, projection" rel="stylesheet" type="text/css" href="/css/styles.css"/>
 		<title><%= @title %></title>
 	</head>
 	
 	<body>
-
-		<%= yield %>
+	<header id="sidebar">
+		<h1 id="logo"><a href="/">¤</a></h1>
+		<div id="x">
+			<h1>BlaBlaBla</h1>
+			<h2>blabla</h2>
+			<h3>the quick brown fox jumped over the lazy dog the quick brown fox jumped over the lazy dog!</h3>
+			<ul id="nav">
+				<li>
+					<a href="dummy">A long very very link</a>
+				</li>
+				<li>
+					<a href="dummy">Medium link</a>
+				</li>
+				<li>
+					<a href="dummy">Link</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+		<section id="river">
+			<%= yield %>
+		</sextion>
+	<footer class="post">
+		<p class="date">© 2013 TEMOATS</p>
+	</footer>
 
 	</body>
 </html>

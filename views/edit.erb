@@ -10,6 +10,15 @@
 		Auther: <br /> 
 		<input type="text" name="post[auther]" id="auther" value="<%= @post.auther %>"/>
 	</p>
+	<p>
+		New Tags: <br /> 
+		<input type="text" name="tags[name]" id="tags"/><br/>
+		<% @post.tags.each do |t| %>
+			<a href="/edit/<%= @post.id %>/delete/<%= t.id %>"><%= t.name %> Delete</a>
+
+		<% end %>
+	</p>
+
 	<textarea type="text" name="post[content]" id="content" rows="15" cols="30"><%= @post.content %></textarea><br />
 	<input type="submit" value="Save" />
 </form>

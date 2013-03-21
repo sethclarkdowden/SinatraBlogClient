@@ -1,7 +1,13 @@
-<div class="">
-	<h1> <%= @post.title %> : <%= @post.id %> </h1>
-	<p> Auther: <%= @post.auther %> </p>
-	<p> <%= @post.content %> </p>
+<div class="post">
+	<div class="container">
+		<h1 class="title"><%= @post.title %></h1>
+		<p class="date"> Tags: 
+			<% @tags.each do |tag| %> 
+				<%= tag.name %>
+			<% end %>
+		</p>
+		<p> <%= @post.content %> </p>
+	</div>
 </div>
 
 <h3>New Comment:</h3>
