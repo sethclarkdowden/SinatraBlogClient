@@ -3,9 +3,10 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-migrations'
 require 'dm-timestamps'
+require 'dm-postgres-adapter'
 require './lib/authorization'
 
-DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_MAROON_URL '] || 'postgres://localhost/db')
+DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_MAROON_URL'] || 'postgres://localhost/db')
 
 class Post
 	include DataMapper::Resource
