@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 gem 'sinatra'
-gem 'rubygems'
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-timestamps'
