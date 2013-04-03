@@ -5,7 +5,7 @@ require 'dm-migrations'
 require 'dm-timestamps'
 require './lib/authorization'
 
-DataMapper.setup(:default, ENV['ec2-54-243-224-187.compute-1.amazonaws.com'] || 'postgres://localhost/mydb')
+DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_MAROON_URL '] || 'postgres://localhost/db')
 
 class Post
 	include DataMapper::Resource
