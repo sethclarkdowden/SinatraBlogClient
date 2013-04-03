@@ -5,7 +5,7 @@ require 'dm-migrations'
 require 'dm-timestamps'
 require './lib/authorization'
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/blog.db")
+DataMapper.setup(:default, ENV['ec2-54-243-224-187.compute-1.amazonaws.com'] || 'postgres://localhost/mydb')
 
 class Post
 	include DataMapper::Resource
